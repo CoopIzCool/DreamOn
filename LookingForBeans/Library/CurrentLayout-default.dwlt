@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 58
+  controlID: 130
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 59
+  controlID: 131
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 60
+  controlID: 62
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 61
+  controlID: 63
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d0410000
+      m_SelectedIDs: 9c380000
       m_LastClickedID: 0
-      m_ExpandedIDs: d8faffff
+      m_ExpandedIDs: 40fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -482,9 +482,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.6020684, y: -0.6758671, z: 0.8607297}
+    m_Target: {x: 7.762318, y: -1.039763, z: 8.117676}
     speed: 2
-    m_Value: {x: -0.6020684, y: -0.6758671, z: 0.8607297}
+    m_Value: {x: 7.762318, y: -1.039763, z: 8.117676}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -530,13 +530,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.16530304, y: 0.8112689, z: -0.2740869, w: -0.48928002}
+    m_Target: {x: -0.2823357, y: 0.3560564, z: -0.11378369, w: -0.8834957}
     speed: 2
-    m_Value: {x: -0.16562356, y: 0.8115892, z: -0.27555212, w: -0.48781443}
+    m_Value: {x: -0.2825059, y: 0.35473058, z: -0.11336, w: -0.8840284}
   m_Size:
-    m_Target: 3.4091144
+    m_Target: 5.6942954
     speed: 2
-    m_Value: 3.1091144
+    m_Value: 5.394295
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -690,20 +690,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ryanc\Desktop\RIT\IGME 320\DreamOn\LookingForBeans
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca410000
-    m_LastClickedID: 16842
-    m_ExpandedIDs: 00000000c041000000ca9a3b
+    m_SelectedIDs: 64370000
+    m_LastClickedID: 14180
+    m_ExpandedIDs: 000000005a37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,7 +731,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000005a370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009837000050390000223b00006438000056480000783c00008c3c0000743c0000ce3d0000d63d0000983c0000c23d0000d23d00007a3800008a460000c8420000404600003c46000034460000484600003846000044460000807e0100f445000040830000448300005e83000058830000de4700004c83000084830000c8470000cc470000d0470000ca470000e6470000e24700005483000048830000e4470000d4470000da47000050830000d8470000ec470000d6470000ea47000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
