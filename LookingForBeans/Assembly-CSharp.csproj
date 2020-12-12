@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RayCastInteraction.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WalkerMovement.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Reference Include="UnityEngine">

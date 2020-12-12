@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Interact
   - Ground
+  - Play
+  - Exit
+  - Options
   layers:
   - Default
   - TransparentFX
