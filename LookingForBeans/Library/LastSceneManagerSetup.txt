@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/SeansScene.unity
+=======
+- path: Assets/Scenes/Eric's Scene.unity
+>>>>>>> Eric
   isLoaded: 1
   isActive: 1
   isSubScene: 0

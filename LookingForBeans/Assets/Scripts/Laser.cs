@@ -15,14 +15,18 @@ public class Laser : MonoBehaviour
     private Func<bool> castRaysFunc;
 
     private bool solved = false;
-    
+
+    private const int maxLasers = 1000;
+    private int currentLasers = 0;
+    private bool maxLasersReached = false;
+
     #endregion
 
     private void Start()
     {
         laserContainer = new GameObject();
-        LineRenderer laser;
-        laser = laserContainer.AddComponent<LineRenderer>();
+        laserContainer.name = "Laser Beam";
+        LineRenderer laser = laserContainer.AddComponent<LineRenderer>();
         laser.startWidth = 0.05f;
         laser.endWidth = 0.05f;
         laser.numCapVertices = 10;
@@ -48,8 +52,8 @@ public class Laser : MonoBehaviour
                 vertices.Add(rays[i].origin);
             }
 
-            // Extend the laser past the final origin if the puzzle is not solved
-            if (!solved) vertices.Add(rays[rays.Count - 1].GetPoint(30));
+            // Extend the laser past the final origin if the puzzle is not solved and the laser didn't just end
+            if (!solved && !maxLasersReached) vertices.Add(rays[rays.Count - 1].GetPoint(30));
 
             laser.positionCount = vertices.Count;
             laser.SetPositions(vertices.ToArray());
@@ -62,21 +66,33 @@ public class Laser : MonoBehaviour
 
     private IEnumerator CastRays()
     {
+        currentLasers = 0;
         yield return new WaitUntil(castRaysFunc);
         StartCoroutine(CastRays());
     }
 
     private List<Ray> Cast(Ray castedRay, List<Ray> rays = null)
     {
+        currentLasers++;
         if (rays == null) rays = new List<Ray>();
         rays.Add(castedRay);
 
+        maxLasersReached = currentLasers > maxLasers;
+
         RaycastHit hit;
-        if (Physics.Raycast(castedRay, out hit) && !solved)
+        if (Physics.Raycast(castedRay, out hit) && !solved && !maxLasersReached)
         {
             if (hit.collider.CompareTag("LaserSolution")) solved = true;
 
             Vector3 reflectDirection = Vector3.Reflect(castedRay.direction, hit.normal);
+            
+            // Don't allow pointing the beam in up/down directions
+            if (reflectDirection.y != 0)
+            {
+                reflectDirection.y = 0;
+                reflectDirection.Normalize();
+            }
+
             Ray nextRay = new Ray(hit.point, reflectDirection);
             return Cast(nextRay, rays);
         }
