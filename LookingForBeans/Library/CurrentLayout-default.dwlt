@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 95
+  controlID: 139
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 96
+  controlID: 140
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 97
+  controlID: 66
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 70
+  controlID: 67
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -395,11 +395,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 696
-      height: 462
+      height: 441
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 348, y: 231}
+    m_Translation: {x: 348, y: 220.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -407,9 +407,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -348
-      y: -231
+      y: -220.5
       width: 696
-      height: 462
+      height: 441
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 696, y: 462}
@@ -447,9 +447,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 302f0000
+      m_SelectedIDs: ba430000
       m_LastClickedID: 0
-      m_ExpandedIDs: 40fbffff
+      m_ExpandedIDs: 7af8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -509,9 +509,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0083523, y: 0.12331104, z: 1.7661872}
+    m_Target: {x: 15.386448, y: -7.258571, z: 1.4217383}
     speed: 2
-    m_Value: {x: -1.0083523, y: 0.12331104, z: 1.7661872}
+    m_Value: {x: 15.386448, y: -7.258571, z: 1.4217383}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -557,13 +557,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.26769462, y: -0.4233135, z: 0.13248643, w: 0.8553563}
+    m_Target: {x: -0.24311036, y: -0.6468118, z: 0.22940336, w: -0.68553275}
     speed: 2
-    m_Value: {x: -0.26769462, y: 0.4233135, z: -0.13248643, w: -0.85535634}
+    m_Value: {x: -0.24413235, y: -0.64645106, z: 0.2303677, w: -0.6851505}
   m_Size:
-    m_Target: 8.1055975
+    m_Target: 15.355393
     speed: 2
-    m_Value: 8.1055975
+    m_Value: 14.694157
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -717,20 +717,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes/Ryan'sMess
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes/Ryan'sMess
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ryanc\Desktop\RIT\IGME 320\DreamOn\LookingForBeans
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 33}
-    m_SelectedIDs: a2350000
-    m_LastClickedID: 13730
-    m_ExpandedIDs: 000000008035000000ca9a3b
+    m_SelectedIDs: ba430000
+    m_LastClickedID: 17338
+    m_ExpandedIDs: 00000000ca350000de35000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,7 +758,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080350000
+    m_ExpandedIDs: 00000000ca350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -2332
+  m_LastSelectedObjectID: 13586
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -906,4 +906,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 770
+  m_LastVerticalScrollValue: 0
