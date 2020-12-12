@@ -103,9 +103,7 @@ public class Interact : MonoBehaviour
         if(pressed)
         {
             if(pressAnimator != null)
-                pressAnimator.SetBool("isPressed", selected);
-
-            Debug.Log(selected);
+                pressAnimator.SetBool("IsPressed", selected);
         }
     }
     void ChooseMovementType()
