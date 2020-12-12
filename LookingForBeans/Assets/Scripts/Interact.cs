@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Deployment.Internal;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -9,6 +11,7 @@ public class Interact : MonoBehaviour
     //Variables
 
     //Interact Types
+    [Header("Interaction Type")]
     public bool move;
     public bool slide;
     public bool rotate;
@@ -17,17 +20,22 @@ public class Interact : MonoBehaviour
     bool selected;
 
     //Rotation
-    float angle = 0.0f;
+    [Header("Rotation Settings")]
     public float angleStep;
+    float angle = 0.0f;   
     float smooth = 5.0f;
 
     //Slide
+    [Header("Slide Settings")]
     public string axis;
     public float range;
-    float maxPoint;
-    float minPoint;
+
+    //Pressed
+    [Header("Pressed Settings")]
+    public Animator pressAnimator;
 
     //Materials
+    [Header("Materials")]
     public Material interactDefaultMat;
     public Material hoverMat;
     public Material selectMat;
@@ -82,6 +90,15 @@ public class Interact : MonoBehaviour
 
         if (selected && Input.GetMouseButtonUp(0))
             selected = false;
+
+        //Updates the buttono animator
+        if(pressed)
+        {
+            if(pressAnimator != null)
+                pressAnimator.SetBool("isPressed", selected);
+
+            Debug.Log(selected);
+        }
     }
     void ChooseMovementType()
     {
@@ -139,11 +156,6 @@ public class Interact : MonoBehaviour
 
                         gameObject.transform.position = mousePos;
                     }
-
-                }
-
-                else if (pressed)
-                {
 
                 }
             }                     
