@@ -9,7 +9,7 @@ public class WayPoint : MonoBehaviour
         if(other.tag == "Player")
         {
            
-            other.gameObject.GetComponent<PlayerController>().IncrementPoint();
+            other.gameObject.GetComponent<PlayerMovement>().IncrementPoint();
         }
     }
 }

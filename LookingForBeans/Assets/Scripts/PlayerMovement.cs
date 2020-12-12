@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     #region Fields
     [SerializeField]
@@ -41,7 +41,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log(currentWayPoint);
             float step = speeds[currentWayPoint] * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, step);
-
+            Vector3 relativePos = wayPoints[currentWayPoint].transform.position - transform.position;
+            Quaternion rotate = Quaternion.LookRotation(relativePos, Vector3.up);
+            rotate.eulerAngles = new Vector3(-90, rotate.eulerAngles.y + 90, rotate.eulerAngles.z);
+            transform.rotation = rotate;
         }
         else
         {
