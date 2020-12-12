@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":12.008424758911133,"y":13.67884349822998,"z":5.242189407348633},"rotation":{"x":-0.23309701681137086,"y":0.6402585506439209,"z":-0.21308831870555879,"w":-0.7002761363983154},"size":0.8660253882408142,"orthographic":false}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":3.3998570442199709,"y":-3.439572811126709,"z":3.9873814582824709},"rotation":{"x":0.29672878980636599,"y":0.6008226275444031,"z":-0.2555375099182129,"w":0.6970868110656738},"size":6.409115791320801,"orthographic":false}
 >>>>>>> Eric
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.4517308473587036,"y":2.4347593784332277,"z":-0.2952576279640198},"rotation":{"x":0.3150307834148407,"y":-0.5747869610786438,"z":0.2546098530292511,"w":0.7111196517944336},"size":0.8660253882408142,"orthographic":false}
+>>>>>>> Mason

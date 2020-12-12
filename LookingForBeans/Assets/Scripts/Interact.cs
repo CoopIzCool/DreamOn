@@ -10,6 +10,10 @@ public class Interact : MonoBehaviour
     #region Fields
     //Variables
 
+    //Main Menu only
+    [Header("Main Menu Only")]
+    public bool onMainMenu;
+
     //Interact Types
     [Header("Interaction Type")]
     public bool move;
@@ -52,7 +56,9 @@ public class Interact : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<MeshRenderer>().material = interactDefaultMat;
+        if(!onMainMenu)
+            gameObject.GetComponent<MeshRenderer>().material = interactDefaultMat;
+
         hitByRay = false;
         selected = false;
     }
@@ -61,11 +67,13 @@ public class Interact : MonoBehaviour
     void Update()
     {
         //Test if the cursor is hovering over an interactable objects
-        UpdateMaterial();
+        if(!onMainMenu)
+            UpdateMaterial();
 
-        UpdateSelect();
+        if(!onMainMenu)
+            UpdateSelect();
 
-        if(selected)
+        if(selected || onMainMenu)
             ChooseMovementType();
     }
 
@@ -126,10 +134,6 @@ public class Interact : MonoBehaviour
                     RotateObject();
                 }
 
-                //Object will only rotate around its center
-                else if (rotate)
-                   RotateObject();
-
                 else if (slide)
                 {
                     //Determine which axis is being used
@@ -163,7 +167,12 @@ public class Interact : MonoBehaviour
 
         gameObject.layer = 0;
         //Determine how object moves based on what type it is
-        
+
+            //Object will only rotate around its center
+        if(rotate)
+            RotateObject();
+
+
     }
 
     void RotateObject()

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\RayCastInteraction.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WalkerMovement.cs" />
     <Compile Include="Assets\Scripts\WayPoint.cs" />
     <Reference Include="UnityEngine">

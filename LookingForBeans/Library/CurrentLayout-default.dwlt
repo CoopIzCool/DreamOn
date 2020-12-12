@@ -22,6 +22,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 542}
 =======
     x: 0
@@ -33,6 +34,9 @@ MonoBehaviour:
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
 >>>>>>> Eric
+=======
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> Mason
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -88,9 +92,15 @@ MonoBehaviour:
     x: 1644
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1522
     height: 767
   m_MinSize: {x: 875, y: 542}
+=======
+    width: 1536
+    height: 821
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> Mason
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 =======
@@ -194,12 +204,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1522
     height: 717
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
   controlID: 41
+=======
+    width: 1536
+    height: 771
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
+  vertical: 1
+  controlID: 126
+>>>>>>> Mason
 --- !u!114 &6
 =======
   - {fileID: 7}
@@ -238,12 +257,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1522
     height: 717
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
   controlID: 42
+=======
+    width: 1536
+    height: 771
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
+  vertical: 0
+  controlID: 127
+>>>>>>> Mason
 --- !u!114 &7
 =======
     width: 1920
@@ -272,12 +300,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1245
     height: 717
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 43
+=======
+    width: 1256
+    height: 771
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
+  vertical: 1
+  controlID: 89
+>>>>>>> Mason
 --- !u!114 &8
 =======
   m_Children: []
@@ -314,12 +351,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1245
     height: 446
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 44
+=======
+    width: 1256
+    height: 480
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 63
+>>>>>>> Mason
 --- !u!114 &9
 =======
     width: 1644
@@ -349,10 +395,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 205
     height: 446
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    width: 206
+    height: 480
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Mason
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -383,6 +436,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 205
     y: 0
     width: 1040
@@ -393,6 +447,12 @@ MonoBehaviour:
     width: 1418
     height: 686
 >>>>>>> Eric
+=======
+    x: 206
+    y: 0
+    width: 1050
+    height: 480
+>>>>>>> Mason
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -423,12 +483,21 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 446
     width: 1245
     height: 271
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 18}
+=======
+    y: 480
+    width: 1256
+    height: 291
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
+>>>>>>> Mason
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
@@ -452,10 +521,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1245
     y: 0
+<<<<<<< HEAD
     width: 277
     height: 717
   m_MinSize: {x: 277, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 280
+    height: 771
+  m_MinSize: {x: 276, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Mason
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -491,10 +567,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 212
     y: 80.8
     width: 1038
     height: 425
+=======
+    x: 206.40001
+    y: 73.6
+    width: 1048
+    height: 459
+>>>>>>> Mason
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -540,16 +623,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 1038
       height: 404
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 519, y: 202}
+=======
+      width: 1048
+      height: 438
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 524, y: 219}
+>>>>>>> Mason
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -519
       y: -202
       width: 1038
@@ -557,6 +648,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1297.5, y: 531.25}
+=======
+      x: -524
+      y: -219
+      width: 1048
+      height: 438
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1310, y: 573.75}
+>>>>>>> Mason
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -745,14 +845,21 @@ MonoBehaviour:
     height: 425
 =======
     x: 0
+<<<<<<< HEAD
     y: 73
     width: 225
     height: 665
 >>>>>>> Eric
+=======
+    y: 73.6
+    width: 205
+    height: 459
+>>>>>>> Mason
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 6c3a0000
       m_LastClickedID: 0
@@ -762,6 +869,11 @@ MonoBehaviour:
       m_LastClickedID: 13834
       m_ExpandedIDs: 14f8ffff1ef8ffff24f8ffff14f9ffff
 >>>>>>> Eric
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 38d4ffffb4d6ffffb6f1ffff92f5ffff46faffff3efbffffd03b0000
+>>>>>>> Mason
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -815,6 +927,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 212
     y: 80.8
     width: 1038
@@ -825,6 +938,12 @@ MonoBehaviour:
     width: 1416
     height: 665
 >>>>>>> Eric
+=======
+    x: 206.40001
+    y: 73.6
+    width: 1048
+    height: 459
+>>>>>>> Mason
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -837,6 +956,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 2.0411775, y: -2.5353303, z: -0.29651552}
     speed: 2
     m_Value: {x: 2.0411777, y: -2.5353305, z: -0.296515}
@@ -845,6 +965,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -11.632824, y: -8.778638, z: 6.7805614}
 >>>>>>> Eric
+=======
+    m_Target: {x: 0.45173085, y: 2.4347594, z: -0.29525763}
+    speed: 2
+    m_Value: {x: 0.45173085, y: 2.4347594, z: -0.29525763}
+>>>>>>> Mason
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -891,9 +1016,15 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.24760298, y: -0.6408186, z: 0.22998847, w: -0.6893788}
     speed: 2
     m_Value: {x: -0.24862507, y: -0.64044297, z: 0.23093875, w: -0.68897444}
+=======
+    m_Target: {x: 0.31503078, y: -0.57478696, z: 0.25460985, w: 0.71111965}
+    speed: 2
+    m_Value: {x: 0.31500843, y: -0.5747462, z: 0.2545918, w: 0.7110692}
+>>>>>>> Mason
   m_Size:
     m_Target: 3.6339743
     speed: 2
@@ -924,7 +1055,11 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
+<<<<<<< HEAD
   m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+=======
+  m_LastSceneViewRotation: {x: -0.30108446, y: 0.033704445, z: -0.01066221, w: -0.95300466}
+>>>>>>> Mason
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1121,20 +1256,35 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/SeansModels/SeansPrefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/SeansModels/SeansPrefabs
+=======
+    - Assets/Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts
+>>>>>>> Mason
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projects\DreamOn\LookingForBeans
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 110}
     m_SelectedIDs: 04360000
     m_LastClickedID: 13828
     m_ExpandedIDs: 00000000a2350000ba35000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 3a350000
+    m_LastClickedID: 13626
+    m_ExpandedIDs: 000000001c3500002c3500003c350000403500005037000000ca9a3b
+>>>>>>> Mason
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1162,7 +1312,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a2350000
+=======
+    m_ExpandedIDs: 000000001c350000
+>>>>>>> Mason
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1187,10 +1341,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300009837000050390000223b00006438000056480000783c00008c3c0000743c0000ce3d0000d63d0000983c0000c23d0000d23d00007a3800008a460000c8420000404600003c46000034460000484600003846000044460000807e0100f445000040830000448300005e83000058830000de4700004c83000084830000c8470000cc470000d0470000ca470000e6470000e24700005483000048830000e4470000d4470000da47000050830000d8470000ec470000d6470000ea47000000000000b03e0000
+=======
+    m_SelectedInstanceIDs: e63b0000
+    m_LastClickedInstanceID: 15334
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300009837000050390000223b00006438000056480000783c00008c3c0000743c0000ce3d0000d63d0000983c0000c23d0000d23d00007a3800008a460000c8420000404600003c46000034460000484600003846000044460000807e0100f445000040830000448300005e83000058830000de4700004c83000084830000c8470000cc470000d0470000ca470000e6470000e24700005483000048830000e4470000d4470000da47000050830000d8470000ec470000d6470000ea470000b03e000000000000
+>>>>>>> Mason
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1340,6 +1501,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 7.2000003
     y: 526.4
     width: 1244
@@ -1348,6 +1510,16 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_LastSelectedObjectID: -18118
+=======
+    x: 0
+    y: 553.60004
+    width: 1255
+    height: 270
+  m_ViewDataDictionary: {fileID: 0}
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -15060
+>>>>>>> Mason
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

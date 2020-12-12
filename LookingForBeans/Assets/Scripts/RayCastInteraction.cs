@@ -33,6 +33,20 @@ public class RayCastInteraction : MonoBehaviour
                 previousInteractObject = hit.collider.gameObject;
                 previousInteractObject.GetComponent<Interact>().hitByRay = true;
             }
+            else if(hit.collider.gameObject.tag == "Play")
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    gameObject.GetComponent<UIManager>().Play();
+                }
+            }
+            else if(hit.collider.gameObject.tag == "Quit")
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    gameObject.GetComponent<UIManager>().Exit();
+                }
+            }
             else
             {
                 if (previousInteractObject != null)
