@@ -38,8 +38,10 @@ public class PlayerController : MonoBehaviour
     {
         if (continueMovement)
         {
+            Debug.Log(currentWayPoint);
             float step = speeds[currentWayPoint] * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, step);
+
         }
         else
         {
@@ -52,7 +54,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("AAAAAAA");
                 continueMovement = true;
             }
         }
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
 
     public void IncrementPoint()
     {
+        Debug.Log("Next Waypoint");
         currentWayPoint++;
     }
 
@@ -68,7 +70,5 @@ public class PlayerController : MonoBehaviour
         launchPoints[0] = transform.position;
         launchPoints[2] = endPoint;
         launchPoints[1] = launchPoints[0] + ((launchPoints[2] - launchPoints[0]) / 2) + (Vector3.up * launchHeight);
-        Debug.Log(launchHeight);
-        Debug.Log(launchPoints[1]);
     }
 }

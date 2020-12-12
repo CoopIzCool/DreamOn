@@ -1,6 +1,7 @@
 sceneSetups:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/SeansScene.unity
 =======
 - path: Assets/Scenes/Eric's Scene.unity
@@ -8,6 +9,9 @@ sceneSetups:
 =======
 - path: Assets/Scenes/MainMenu.unity
 >>>>>>> Mason
+=======
+- path: Assets/Scenes/Levels/Level1.unity
+>>>>>>> Ryan
   isLoaded: 1
   isActive: 1
   isSubScene: 0
