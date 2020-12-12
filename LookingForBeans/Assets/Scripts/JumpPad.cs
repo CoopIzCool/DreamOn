@@ -22,10 +22,9 @@ public class JumpPad : MonoBehaviour
             count--;
             if (count == 0)
             {
-                other.gameObject.GetComponent<PlayerController>().Height = height;
-                other.gameObject.GetComponent<PlayerController>().SetPoints(endPoint);
-
-                other.gameObject.GetComponent<PlayerController>().Continue = false;
+                other.gameObject.GetComponent<PlayerMovement>().Height = height;
+                other.gameObject.GetComponent<PlayerMovement>().SetPoints(endPoint);
+                other.gameObject.GetComponent<PlayerMovement>().Continue = false;
             }
         }
     }

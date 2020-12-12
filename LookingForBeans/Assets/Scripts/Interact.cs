@@ -176,10 +176,10 @@ public class Interact : MonoBehaviour
     void RotateObject()
     {
         //Player Input
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.Q))
             angle += angleStep;
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.E))
 
             angle -= angleStep;
 

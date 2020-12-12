@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/LevelEric.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> Develop
   isLoaded: 1
   isActive: 1
   isSubScene: 0
