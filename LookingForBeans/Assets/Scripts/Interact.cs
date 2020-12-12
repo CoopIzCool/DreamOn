@@ -51,7 +51,20 @@ public class Interact : MonoBehaviour
 
     //Other Game Objects
     public GameObject ground;
+
+    //launching fields
+    public bool beingLaunched;
+    private Vector3[] launchPoints = new Vector3[3];
+    [SerializeField]
+    private float launchHeight;
+    private float launchCount;
     #endregion
+    #region Properties
+    public float Height
+    {
+        set { launchHeight = value; }
+    }
+    #endregion Properties
 
     // Start is called before the first frame update
     void Start()
@@ -61,20 +74,39 @@ public class Interact : MonoBehaviour
 
         hitByRay = false;
         selected = false;
+        beingLaunched = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Test if the cursor is hovering over an interactable objects
-        if(!onMainMenu)
-            UpdateMaterial();
 
-        if(!onMainMenu)
-            UpdateSelect();
+        //Test if the cursor is hovering over an interactable objects if the object is not being launched
+        if (!beingLaunched)
+        {
+            if (!onMainMenu)
+                UpdateMaterial();
 
-        if(selected || onMainMenu)
-            ChooseMovementType();
+            if (!onMainMenu)
+                UpdateSelect();
+
+            if (selected || onMainMenu)
+                ChooseMovementType();
+        }
+        else
+        {
+            if (launchCount < 1.0f)
+            {
+                launchCount += 1.0f * Time.deltaTime;
+                Vector3 m1 = Vector3.Lerp(launchPoints[0], launchPoints[1], launchCount);
+                Vector3 m2 = Vector3.Lerp(launchPoints[1], launchPoints[2], launchCount);
+                transform.position = Vector3.Lerp(m1, m2, launchCount);
+            }
+            else
+            {
+                beingLaunched = false;
+            }
+        }
     }
 
     /// <summary>
@@ -186,5 +218,12 @@ public class Interact : MonoBehaviour
         Quaternion target = Quaternion.Euler(0, angle, 0);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+    }
+
+    public void SetPoints(Vector3 endPoint)
+    {
+        launchPoints[0] = transform.position;
+        launchPoints[2] = endPoint;
+        launchPoints[1] = launchPoints[0] + ((launchPoints[2] - launchPoints[0]) / 2) + (Vector3.up * launchHeight);
     }
 }
