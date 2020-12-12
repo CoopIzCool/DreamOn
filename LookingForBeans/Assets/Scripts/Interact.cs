@@ -12,6 +12,7 @@ public class Interact : MonoBehaviour
     public bool move;
     public bool slide;
     public bool rotate;
+    public bool pressed;
 
     bool selected;
 
@@ -19,7 +20,13 @@ public class Interact : MonoBehaviour
     float angle = 0.0f;
     public float angleStep;
     float smooth = 5.0f;
- 
+
+    //Slide
+    public string axis;
+    public float range;
+    float maxPoint;
+    float minPoint;
+
     //Materials
     public Material interactDefaultMat;
     public Material hoverMat;
@@ -54,6 +61,9 @@ public class Interact : MonoBehaviour
             ChooseMovementType();
     }
 
+    /// <summary>
+    /// Updates material based how an objected is being interacted
+    /// </summary>
     void UpdateMaterial()
     {
         if (hitByRay)
@@ -62,6 +72,9 @@ public class Interact : MonoBehaviour
             gameObject.GetComponent<MeshRenderer>().material = interactDefaultMat;
     }
 
+    /// <summary>
+    /// Ensures that a selected object remains selected even if the cursor leaves the hitbox
+    /// </summary>
     void UpdateSelect()
     {
         if (hitByRay && Input.GetMouseButton(0))
@@ -75,6 +88,7 @@ public class Interact : MonoBehaviour
         //Player selects the object
         gameObject.GetComponent<MeshRenderer>().material = selectMat;
 
+        //Creates a raycast that will ignore the object
         gameObject.layer = 2;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -84,37 +98,74 @@ public class Interact : MonoBehaviour
             {
                 Vector3 mousePos = hit.point;
 
+                //Object freely moves and rotates on the ground
                 if (move)
                 {
+                    //Freeform movement
                     mousePos.y += (gameObject.transform.localScale.y / 2);
                     gameObject.transform.position = mousePos;
+
+                    //Rotation
+                    RotateObject();
                 }
 
+                //Object will only rotate around its center
                 else if (rotate)
+                   RotateObject();
+
+                else if (slide)
+                {
+                    //Determine which axis is being used
+                    if(axis == "x")
+                    {
+                        float yPos = gameObject.transform.position.y;
+                        float zPos = gameObject.transform.position.z;
+
+                        mousePos.x = Mathf.Clamp(mousePos.x, -range, range);
+                        mousePos.y = yPos;
+                        mousePos.z = zPos;
+
+                        gameObject.transform.position = mousePos;
+
+                    }
+                    else if(axis == "z")
+                    {
+                        float xPos = gameObject.transform.position.x;
+                        float yPos = gameObject.transform.position.y;
+                        
+                        mousePos.x = xPos;
+                        mousePos.y = yPos;
+                        mousePos.z = Mathf.Clamp(mousePos.z, -range, range);
+
+                        gameObject.transform.position = mousePos;
+                    }
+
+                }
+
+                else if (pressed)
                 {
 
-                    //Player Input
-                    if (Input.GetKey(KeyCode.A))
-                        angle += angleStep;
-
-                    if (Input.GetKey(KeyCode.D))
-
-                        angle -= angleStep;
-
-                    Debug.Log(angle);
-
-                    Quaternion target = Quaternion.Euler(0, angle, 0);
-
-                    transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
                 }
-            }
-            
-            
-
+            }                     
         }
 
         gameObject.layer = 0;
         //Determine how object moves based on what type it is
         
+    }
+
+    void RotateObject()
+    {
+        //Player Input
+        if (Input.GetKey(KeyCode.A))
+            angle += angleStep;
+
+        if (Input.GetKey(KeyCode.D))
+
+            angle -= angleStep;
+
+        Quaternion target = Quaternion.Euler(0, angle, 0);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 }
