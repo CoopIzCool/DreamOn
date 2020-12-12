@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (continueMovement)
         {
-            Debug.Log(currentWayPoint);
             float step = speeds[currentWayPoint] * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, step);
             Vector3 relativePos = wayPoints[currentWayPoint].transform.position - transform.position;

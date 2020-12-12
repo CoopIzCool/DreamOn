@@ -10,6 +10,8 @@ public class JumpPad : MonoBehaviour
     private Vector3 endPoint;
     [SerializeField]
     private float height;
+    [SerializeField]
+    private Material deactive;
     #endregion Fields
     private void Start()
     {
@@ -17,15 +19,26 @@ public class JumpPad : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Interact")
         {
             count--;
-            if (count == 0)
+        }
+        if (count == 0)
+        {
+            if (other.tag == "Player")
             {
                 other.gameObject.GetComponent<PlayerMovement>().Height = height;
                 other.gameObject.GetComponent<PlayerMovement>().SetPoints(endPoint);
                 other.gameObject.GetComponent<PlayerMovement>().Continue = false;
+
             }
+            else if (other.tag == "Interact")
+            {
+                other.gameObject.GetComponent<Interact>().Height = height;
+                other.gameObject.GetComponent<Interact>().SetPoints(endPoint);
+                other.gameObject.GetComponent<Interact>().beingLaunched = true;
+            }
+            GetComponent<MeshRenderer>().material = deactive;
         }
     }
 }
