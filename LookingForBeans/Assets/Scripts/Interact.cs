@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Interact : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class Interact : MonoBehaviour
 
     bool selected;
 
+    //Rotation
+    float angle = 0.0f;
+    public float angleStep;
+    float smooth = 5.0f;
+ 
     //Materials
     public Material interactDefaultMat;
     public Material hoverMat;
@@ -69,24 +75,46 @@ public class Interact : MonoBehaviour
         //Player selects the object
         gameObject.GetComponent<MeshRenderer>().material = selectMat;
 
-        //Determine how object moves based on what type it is
-        if (move)
-        {
-            gameObject.layer = 2;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        gameObject.layer = 2;
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject.tag == "Ground")
             {
-                if (hit.collider.gameObject.tag == "Ground")
+                Vector3 mousePos = hit.point;
+
+                if (move)
                 {
-                    Vector3 mousePos = hit.point;
                     mousePos.y += (gameObject.transform.localScale.y / 2);
                     gameObject.transform.position = mousePos;
                 }
 
-            }
+                else if (rotate)
+                {
 
-            gameObject.layer = 0;
+                    //Player Input
+                    if (Input.GetKey(KeyCode.A))
+                        angle += angleStep;
+
+                    if (Input.GetKey(KeyCode.D))
+
+                        angle -= angleStep;
+
+                    Debug.Log(angle);
+
+                    Quaternion target = Quaternion.Euler(0, angle, 0);
+
+                    transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+                }
+            }
+            
+            
+
         }
+
+        gameObject.layer = 0;
+        //Determine how object moves based on what type it is
+        
     }
 }
