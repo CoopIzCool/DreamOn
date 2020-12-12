@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Interact
   - Ground
+=======
+  - LaserSolution
+>>>>>>> Eric
   layers:
   - Default
   - TransparentFX
