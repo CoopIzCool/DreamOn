@@ -8,6 +8,7 @@ public class WayPoint : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+           
             other.gameObject.GetComponent<PlayerController>().IncrementPoint();
         }
     }
