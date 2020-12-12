@@ -7,28 +7,52 @@ public class Laser : MonoBehaviour
 {
     #region Fields
 
-    private Stack<GameObject> lasers = new Stack<GameObject>();
+    private GameObject laserContainer;
 
     [SerializeField]
     private Material material;
 
     private Func<bool> castRaysFunc;
 
+    private bool solved = false;
+    
     #endregion
 
     private void Start()
     {
+        laserContainer = new GameObject();
+        LineRenderer laser;
+        laser = laserContainer.AddComponent<LineRenderer>();
+        laser.startWidth = 0.05f;
+        laser.endWidth = 0.05f;
+        laser.numCapVertices = 10;
+        laser.numCornerVertices = 10;
+        laser.startColor = Color.red;
+        laser.endColor = Color.red;
+        laser.material = material;
+
         // Using this rather than update to make sure the stack is not modified across 
         // multiple frames. This would cause garbage/old lasers to stick around.
         castRaysFunc = () =>
         {
-            while (lasers.Count > 0)
+            solved = false;
+
+            // Recursively cast the laser
+            Ray laserRay = new Ray(transform.position, transform.forward);
+            List<Ray> rays = Cast(laserRay);
+
+            // Populate the linerenderer's vertices
+            List<Vector3> vertices = new List<Vector3>();
+            for (int i = 0; i < rays.Count; i++)
             {
-                Destroy(lasers.Pop());
+                vertices.Add(rays[i].origin);
             }
 
-            Ray laserRay = CreateLaserObject(transform.position, transform.forward);
-            Cast(laserRay);
+            // Extend the laser past the final origin if the puzzle is not solved
+            if (!solved) vertices.Add(rays[rays.Count - 1].GetPoint(30));
+
+            laser.positionCount = vertices.Count;
+            laser.SetPositions(vertices.ToArray());
 
             return true;
         };
@@ -42,61 +66,23 @@ public class Laser : MonoBehaviour
         StartCoroutine(CastRays());
     }
 
-    private void Cast(Ray ray)
+    private List<Ray> Cast(Ray castedRay, List<Ray> rays = null)
     {
+        if (rays == null) rays = new List<Ray>();
+        rays.Add(castedRay);
+
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(castedRay, out hit) && !solved)
         {
-            // Change the laser to end at the hit position
-            lasers.Peek()
-                .GetComponent<LineRenderer>()
-                .SetPositions(new[] { lasers.Peek().transform.position, hit.point });
+            if (hit.collider.CompareTag("LaserSolution")) solved = true;
 
-            Vector3 reflectDirection = Vector3.Reflect(ray.direction, hit.normal);
-
-            Ray nextRay = CreateLaserObject(hit.point, reflectDirection);
-            Cast(nextRay);
+            Vector3 reflectDirection = Vector3.Reflect(castedRay.direction, hit.normal);
+            Ray nextRay = new Ray(hit.point, reflectDirection);
+            return Cast(nextRay, rays);
         }
-    }
-
-    private Ray CreateLaserObject(Vector3 startingPoint, Vector3 dir)
-    {
-        // Init a new gameobject to house the laser
-        lasers.Push(new GameObject());
-        lasers.Peek().name = "Laser";
-        lasers.Peek().transform.position = startingPoint;
-        lasers.Peek().transform.forward = dir;
-
-        // Make the line renderer and point it in the right direction
-        LineRenderer laser = MakeLineRenderer(lasers.Peek());
-        Ray laserRay = GetRayFromObject(lasers.Peek());
-        SetLineRendererVerticesByRay(laser, laserRay);
-
-        return laserRay;
-    }
-
-    private LineRenderer MakeLineRenderer(GameObject obj)
-    {
-        LineRenderer laser;
-        laser = obj.AddComponent<LineRenderer>();
-        laser.startWidth = 0.05f;
-        laser.endWidth = 0.05f;
-        laser.numCapVertices = 10;
-        laser.startColor = Color.red;
-        laser.endColor = Color.red;
-        laser.material = material;
-
-        return laser;
-    }
-
-    private void SetLineRendererVerticesByRay(LineRenderer laser, Ray laserRay)
-    {
-        var linePositions = new[] { laserRay.origin, laserRay.GetPoint(30) };
-        laser.SetPositions(linePositions);
-    }
-
-    private Ray GetRayFromObject(GameObject obj)
-    {
-        return new Ray(obj.transform.position, obj.transform.forward);
+        else
+        {
+            return rays;
+        }
     }
 }
