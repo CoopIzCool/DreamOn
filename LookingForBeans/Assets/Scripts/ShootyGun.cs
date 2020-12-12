@@ -17,15 +17,15 @@ public class ShootyGun : MonoBehaviour
 
     [SerializeField]
     [Range(0.1f, 1.0f)]
-    private float fireInterval;
+    private float fireInterval = 1.0f;
 
     [SerializeField]
     [Range(0.1f, 2.0f)]
-    private float bulletDeathTime;
+    private float bulletDeathTime = 2.0f;
 
     [SerializeField]
     [Range(1.0f, 10.0f)]
-    private float bulletSpeed;
+    private float bulletSpeed = 10.0f;
 
     #endregion
 
