@@ -64,9 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFixedRotation.cs" />
+    <Compile Include="Assets\Scripts\Interact.cs" />
+    <Compile Include="Assets\Scripts\JumpPad.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\RayCastInteraction.cs" />
+    <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\WalkerMovement.cs" />
+    <Compile Include="Assets\Scripts\WayPoint.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFixedRotation : MonoBehaviour
 {
     #region Fields
+    [SerializeField]
     private float radius;
     private float counter;
     private float yPos;
@@ -26,11 +27,11 @@ public class CameraFixedRotation : MonoBehaviour
         //increments counter;
         if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            counter -= 0.5f;
+            counter += 0.5f;
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            counter += 0.5f;
+            counter -= 0.5f;
         }
 
         //camera Zoom
@@ -47,11 +48,11 @@ public class CameraFixedRotation : MonoBehaviour
         //changes cameras horizantal view
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            xRotate += 0.5f;
+            xRotate -= 0.5f;
         }
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
-            xRotate -= 0.5f;
+            xRotate += 0.5f;
         }
 
         //reset counter for easy calculations
@@ -61,10 +62,11 @@ public class CameraFixedRotation : MonoBehaviour
         }
         //convert x and y to radians
         float radians = counter * (Mathf.PI / 180.0f);
-        float x = Mathf.Sin(radians) * 12.0f;
-        float z = Mathf.Cos(radians) * 12.0f;
+        float x = Mathf.Sin(radians) * radius;
+        float z = Mathf.Cos(radians) * radius;
         //set position and rotation
         transform.position = new Vector3(x, yPos, z);
         transform.rotation = Quaternion.Euler(xRotate * xRotateSensitivity, counter-180, 0);
+        
     }
 }
