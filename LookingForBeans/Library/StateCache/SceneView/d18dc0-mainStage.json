@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":464.529052734375,"y":108.47035217285156,"z":-161.7349853515625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":216.52052307128907,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":5.003641128540039,"y":0.846595048904419,"z":1.3634644746780396},"rotation":{"x":-0.3660433888435364,"y":0.24066127836704255,"z":-0.09859087318181992,"w":-0.8935205936431885},"size":3.2768161296844484,"orthographic":false}
+>>>>>>> Ryan

@@ -573,6 +573,11 @@ PrefabInstance:
       propertyPath: sceneManager
       value: 
       objectReference: {fileID: 676310829}
+    - target: {fileID: 5504850229410419656, guid: 8924b7fbc19c7c6488254dfe72c73630,
+        type: 3}
+      propertyPath: speedUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6285718059401311153, guid: 8924b7fbc19c7c6488254dfe72c73630,
         type: 3}
       propertyPath: m_Name
@@ -1685,7 +1690,7 @@ PrefabInstance:
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
       propertyPath: speeds.Array.data[3]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
@@ -1827,7 +1832,7 @@ PrefabInstance:
     - target: {fileID: 530799777336665901, guid: e79122623d490a744a113e67cb653ed3,
         type: 3}
       propertyPath: target
-      value: MainMenu
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 530799777336665901, guid: e79122623d490a744a113e67cb653ed3,
         type: 3}

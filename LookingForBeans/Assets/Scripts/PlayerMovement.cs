@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         continueMovement = true;
         launchCount = 0;
         freeFall = false;
+        Time.timeScale = PlayerPrefs.GetInt("Speedcrement");
+        Debug.Log("Speed Factor is" + PlayerPrefs.GetInt("Speedcrement"));
     }
     // Update is called once per frame
     void Update()
