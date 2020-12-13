@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - LaserSolution
   - LaserAbsorber
+  - BulletAbsorber
   layers:
   - Default
   - TransparentFX
