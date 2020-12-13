@@ -22,7 +22,8 @@ public class Laser : MonoBehaviour
     private bool playerHit = false;
     private bool laserAbsorbed = false;
 
-    private const int maxLasers = 1000;
+    [SerializeField]
+    private int maxLasers = 1000;
     private int currentLasers = 0;
     private bool maxLasersReached = false;
 
