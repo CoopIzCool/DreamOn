@@ -272,7 +272,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1919267204543434502, guid: 3a3a081e9404cdb4b998ce013265ba81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a3a081e9404cdb4b998ce013265ba81, type: 3}
 --- !u!1 &406457526
 GameObject:
@@ -387,6 +388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactable Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041519663049821566, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7a54a013679f3b4981173fa8f134b41, type: 3}
@@ -578,6 +584,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 225553391}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &780352020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780352019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90416c41f2878104490f2ef6851f3111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &780352024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
@@ -978,6 +996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Object
       objectReference: {fileID: 0}
+    - target: {fileID: 4041519663049821566, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7a54a013679f3b4981173fa8f134b41, type: 3}
 --- !u!4 &1446611659 stripped
@@ -1058,7 +1081,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1919267204543434502, guid: 3a3a081e9404cdb4b998ce013265ba81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a3a081e9404cdb4b998ce013265ba81, type: 3}
 --- !u!1 &1515066891 stripped
 GameObject:
@@ -1066,6 +1090,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1508246514}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1515066892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515066891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90416c41f2878104490f2ef6851f3111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1515066896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
@@ -1438,6 +1474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactable Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041519663049821566, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7a54a013679f3b4981173fa8f134b41, type: 3}
