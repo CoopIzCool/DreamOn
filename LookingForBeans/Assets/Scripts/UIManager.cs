@@ -160,7 +160,7 @@ public class UIManager : MonoBehaviour
     {
         //Ensure the current rotation is within a detectable range
         float detectRotate = currentRotation;
-        while(detectRotate > 360)
+        while(detectRotate >= 360)
         {
             detectRotate -= 360;
         }
@@ -171,7 +171,7 @@ public class UIManager : MonoBehaviour
         }
 
         //Move Objects
-        if (detectRotate == 135)
+        if (detectRotate == 0)
         {
             objectTag.text = "Move Objects";
             moveInstruct.SetActive(true);
@@ -180,7 +180,7 @@ public class UIManager : MonoBehaviour
             pressInstruct.SetActive(false);
         }
         //Slide Objects
-        else if(detectRotate == 225)
+        else if(detectRotate == 90)
         {
             objectTag.text = "Slide Objects";
             moveInstruct.SetActive(false);
@@ -188,17 +188,8 @@ public class UIManager : MonoBehaviour
             slideInstruct.SetActive(true);
             pressInstruct.SetActive(false);
         }
-        //Rotate Objects
-        else if(detectRotate == 45)
-        {
-            objectTag.text = "Rotate Objects";
-            moveInstruct.SetActive(false);
-            rotateInstruct.SetActive(true);
-            slideInstruct.SetActive(false);
-            pressInstruct.SetActive(false);
-        }
         //Press Objects
-        else if(detectRotate == 315)
+        else if (detectRotate == 180)
         {
             objectTag.text = "Press Objects";
             moveInstruct.SetActive(false);
@@ -206,6 +197,16 @@ public class UIManager : MonoBehaviour
             slideInstruct.SetActive(false);
             pressInstruct.SetActive(true);
         }
+        //Rotate Objects
+        else if(detectRotate == 270)
+        {
+            objectTag.text = "Rotate Objects";
+            moveInstruct.SetActive(false);
+            rotateInstruct.SetActive(true);
+            slideInstruct.SetActive(false);
+            pressInstruct.SetActive(false);
+        }
+        
     }
 
 }
