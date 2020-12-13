@@ -11,8 +11,16 @@ public class SceneTransition : MonoBehaviour
     private string target;
     public string currentScene;
     public float waitTime;
+<<<<<<< HEAD
     private GameObject music;
     public AudioClip mainMusic;
+=======
+    public GameObject music;
+    public bool isLevel;
+    public static bool isPaused;
+    [SerializeField]
+    private GameObject pauseMenuUI;
+>>>>>>> Develop
     #endregion Fields
 
     #region Properties
@@ -40,12 +48,33 @@ public class SceneTransition : MonoBehaviour
         music = GameObject.Find("MusicManager");
         music.GetComponent<AudioSource>().Play();
         currentScene = currentScene;
+<<<<<<< HEAD
         DontDestroyOnLoad(music);
+=======
+
+        //If this is a level, enable pause implementation and set the player preferences to this level
+        if (isLevel)
+        {
+            isPaused = false;
+            pauseMenuUI.SetActive(false);
+            PlayerPrefs.SetString("PrevLevel", currentScene);
+        }
+>>>>>>> Develop
     }
 
     private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape) && isLevel)
+        {
+            if(isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                pauseGame();
+            }
+        }
     }
     //go to the next level
     public void NextScene()
@@ -94,6 +123,24 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void retryLevel()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("PrevLevel"));
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        isPaused = false;
+    }
+
+    public void pauseGame()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0.0f;
+        isPaused = true;
+    }
     #endregion Level Directory
     #endregion Methods
 }
