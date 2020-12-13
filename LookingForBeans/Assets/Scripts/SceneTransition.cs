@@ -13,6 +13,9 @@ public class SceneTransition : MonoBehaviour
     public float waitTime;
     public GameObject music;
     public bool isLevel;
+    public static bool isPaused;
+    [SerializeField]
+    private GameObject pauseMenuUI;
     #endregion Fields
 
     #region Properties
@@ -38,14 +41,29 @@ public class SceneTransition : MonoBehaviour
         //This actually sets the current scene because
         //clicking the button will somehow skip the assignment of currentscene IDK
         currentScene = currentScene;
-        if(isLevel)
-        PlayerPrefs.SetString("PrevLevel", currentScene);
-        Debug.Log(PlayerPrefs.GetString("PrevLevel"));
+
+        //If this is a level, enable pause implementation and set the player preferences to this level
+        if (isLevel)
+        {
+            isPaused = false;
+            pauseMenuUI.SetActive(false);
+            PlayerPrefs.SetString("PrevLevel", currentScene);
+        }
     }
 
     private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape) && isLevel)
+        {
+            if(isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                pauseGame();
+            }
+        }
     }
     //go to the next level
     public void NextScene()
@@ -91,6 +109,20 @@ public class SceneTransition : MonoBehaviour
     public void retryLevel()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("PrevLevel"));
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        isPaused = false;
+    }
+
+    public void pauseGame()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0.0f;
+        isPaused = true;
     }
     #endregion Level Directory
     #endregion Methods
