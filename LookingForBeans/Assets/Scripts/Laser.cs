@@ -10,15 +10,22 @@ public class Laser : MonoBehaviour
     private GameObject laserContainer;
 
     [SerializeField]
-    private Material material;
+    private Material laserMaterial;
+    [SerializeField]
+    private Material laserSolutionMaterial;
+    [SerializeField]
+    private Animator animator;
 
     private Func<bool> castRaysFunc;
 
     private bool solved = false;
+    private bool playerHit = false;
 
     private const int maxLasers = 1000;
     private int currentLasers = 0;
     private bool maxLasersReached = false;
+
+    private Color unsolvedColor;
 
     #endregion
 
@@ -33,13 +40,17 @@ public class Laser : MonoBehaviour
         laser.numCornerVertices = 10;
         laser.startColor = Color.red;
         laser.endColor = Color.red;
-        laser.material = material;
+        laser.material = laserMaterial;
+
+        unsolvedColor = new Color(221 / 255.0f, 130 / 255.0f, 120 / 255.0f, 1);
 
         // Using this rather than update to make sure the stack is not modified across 
         // multiple frames. This would cause garbage/old lasers to stick around.
         castRaysFunc = () =>
         {
             solved = false;
+            playerHit = false;
+            laserSolutionMaterial.color = unsolvedColor;
 
             // Recursively cast the laser
             Ray laserRay = new Ray(transform.position, transform.forward);
@@ -53,7 +64,14 @@ public class Laser : MonoBehaviour
             }
 
             // Extend the laser past the final origin if the puzzle is not solved and the laser didn't just end
-            if (!solved && !maxLasersReached) vertices.Add(rays[rays.Count - 1].GetPoint(30));
+            if (!solved && !maxLasersReached && !playerHit) vertices.Add(rays[rays.Count - 1].GetPoint(30));
+
+            // If the puzzle is solved, let the player know by recoloring the solution block. Also change the animator if needed.
+            if (solved)
+            {
+                laserSolutionMaterial.color = Color.green;
+                if (animator != null && !animator.GetBool("LaserSolved")) animator.SetBool("LaserSolved", true);
+            }
 
             laser.positionCount = vertices.Count;
             laser.SetPositions(vertices.ToArray());
@@ -62,6 +80,11 @@ public class Laser : MonoBehaviour
         };
 
         StartCoroutine(CastRays());
+    }
+
+    private void OnApplicationQuit()
+    {
+        laserSolutionMaterial.color = unsolvedColor;
     }
 
     private IEnumerator CastRays()
@@ -80,9 +103,10 @@ public class Laser : MonoBehaviour
         maxLasersReached = currentLasers > maxLasers;
 
         RaycastHit hit;
-        if (Physics.Raycast(castedRay, out hit) && !solved && !maxLasersReached)
+        if (Physics.Raycast(castedRay, out hit) && !solved && !maxLasersReached && !playerHit)
         {
             if (hit.collider.CompareTag("LaserSolution")) solved = true;
+            if (hit.collider.CompareTag("Player")) playerHit = true;
 
             Vector3 reflectDirection = Vector3.Reflect(castedRay.direction, hit.normal);
             
