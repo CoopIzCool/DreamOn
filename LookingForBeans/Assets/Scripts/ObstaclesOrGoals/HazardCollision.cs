@@ -7,9 +7,13 @@ public class HazardCollision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("GameOver");
+        }
+        else if(collision.gameObject.tag == "Interact")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
