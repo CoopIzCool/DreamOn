@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float launchHeight;
     private float launchCount;
+    private bool freeFall;
     #endregion Fields
     #region Properites
     public bool Continue
@@ -26,12 +27,18 @@ public class PlayerMovement : MonoBehaviour
     {
         set { launchHeight = value; }
     }
+    public bool FreeFall
+    {
+        get { return freeFall; }
+        set { freeFall = value; }
+    }
     #endregion Properties
     private void Start()
     {
         currentWayPoint = 0;
         continueMovement = true;
         launchCount = 0;
+        freeFall = false;
     }
     // Update is called once per frame
     void Update()
@@ -45,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             rotate.eulerAngles = new Vector3(-90, rotate.eulerAngles.y + 90, rotate.eulerAngles.z);
             transform.rotation = rotate;
         }
-        else
+        else if(!freeFall)
         {
             if (launchCount < 1.0f)
             {
@@ -72,5 +79,6 @@ public class PlayerMovement : MonoBehaviour
         launchPoints[0] = transform.position;
         launchPoints[2] = endPoint;
         launchPoints[1] = launchPoints[0] + ((launchPoints[2] - launchPoints[0]) / 2) + (Vector3.up * launchHeight);
+        launchCount = 0.0f;
     }
 }
