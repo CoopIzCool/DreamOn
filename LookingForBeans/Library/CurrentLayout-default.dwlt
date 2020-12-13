@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1584
     height: 751
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 135
+  controlID: 130
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 454
     width: 1263
     height: 297
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 1584
     height: 801
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 1263
     height: 751
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 60
+  controlID: 58
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 61
+  controlID: 59
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/Levels
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scenes/Levels
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ryanc\Desktop\RIT\IGME 320\DreamOn\LookingForBeans
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 7e360000
-    m_LastClickedID: 13950
-    m_ExpandedIDs: 000000007c3600007e360000ae36000000ca9a3b
+    m_SelectedIDs: 56370000
+    m_LastClickedID: 14166
+    m_ExpandedIDs: 000000003c3700003e3700005a37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c3600007e360000
+    m_ExpandedIDs: 000000003c3700003e370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,8 +404,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 8e390000
+    m_LastClickedInstanceID: 14734
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -502,20 +502,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 08850000
-      m_LastClickedID: 34056
-      m_ExpandedIDs: 408dffff34a8ffff0eaaffff0eadffffd4afffff0cc9ffff68d0ffff5ed2ffff1cd8ffff40dbffff98deffffd8e2ffff54e4ffff86e5ffffdee6ffff1ae8ffff82ebffff06f1ffff02faffff3cfbffff863900001c520000645300009e5b0000e2640000e864000034650000a07300004c84000072850000
+      m_SelectedIDs: 8e390000
+      m_LastClickedID: 0
+      m_ExpandedIDs: e69fffff22a3ffff68a4ffff86a5ffffeaaaffff56adffff82aeffffb8afffffecb0ffff0ab3ffffa8b7ffff24d5ffffcaddffff82e0ffffc6e2ffff52edffff8af3ffffa6f3ffff2afaffff40fbffff1c3a0000e83c000050460000ac4d0000bc4d000068620000b6620000a063000098640000c26e00008e6f0000b2700000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: MusicManager
-        m_OriginalName: MusicManager
+        m_Name: WayPoint
+        m_OriginalName: WayPoint
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 33890
+        m_UserData: 28690
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.508177, y: -0.80784154, z: 32.066257}
+    m_Target: {x: 5.003641, y: 0.84659505, z: 1.3634645}
     speed: 2
-    m_Value: {x: 2.508177, y: -0.80784154, z: 32.066257}
+    m_Value: {x: 5.003641, y: 0.84659505, z: 1.3634645}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,13 +612,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.02579078, y: -0.03538341, z: 0.00091316295, w: -0.9990409}
+    m_Target: {x: -0.3660434, y: 0.24066128, z: -0.09859087, w: -0.8935206}
     speed: 2
-    m_Value: {x: -0.03927506, y: -0.03536785, z: 0.0013907417, w: -0.9986014}
+    m_Value: {x: -0.36604252, y: 0.2406607, z: -0.098590635, w: -0.89351845}
   m_Size:
-    m_Target: 18.916035
+    m_Target: 3.2768161
     speed: 2
-    m_Value: 19.807365
+    m_Value: 3.2768161
   m_Ortho:
     m_Target: 0
     speed: 2
