@@ -704,6 +704,11 @@ PrefabInstance:
       propertyPath: pressAnimator
       value: 
       objectReference: {fileID: 376557394}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: hoverMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 823853b24690c7a429108707bfb16f72, type: 2}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1803,6 +1808,11 @@ PrefabInstance:
       propertyPath: pressAnimator
       value: 
       objectReference: {fileID: 890602279}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: hoverMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 823853b24690c7a429108707bfb16f72, type: 2}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3161,6 +3171,11 @@ PrefabInstance:
       propertyPath: pressAnimator
       value: 
       objectReference: {fileID: 23999113}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: hoverMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 823853b24690c7a429108707bfb16f72, type: 2}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_LocalPosition.x

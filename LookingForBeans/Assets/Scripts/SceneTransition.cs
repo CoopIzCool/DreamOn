@@ -42,7 +42,11 @@ public class SceneTransition : MonoBehaviour
         //This actually sets the current scene because
         //clicking the button will somehow skip the assignment of currentscene IDK
         music = GameObject.Find("MusicManager");
-        music.GetComponent<AudioSource>().Play();
+        if (!music.GetComponent<AudioSource>().isPlaying)
+        {
+            music.GetComponent<AudioSource>().Play();
+        }
+
         currentScene = currentScene;
         DontDestroyOnLoad(music);
 

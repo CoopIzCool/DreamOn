@@ -47,7 +47,7 @@ public class RayCastInteraction : MonoBehaviour
                     gameObject.GetComponent<UIManager>().ToHowToPlay();
                 }
             }
-            else if(hit.collider.gameObject.tag == "Quit")
+            else if(hit.collider.gameObject.tag == "Exit")
             {
                 if(Input.GetMouseButtonDown(0))
                 {

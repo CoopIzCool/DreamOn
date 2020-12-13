@@ -1761,6 +1761,7 @@ MonoBehaviour:
   laserSolutionMaterial: {fileID: 2100000, guid: 3ae820cb4a6bb4847a50be77bd788243,
     type: 2}
   animator: {fileID: 846833313}
+  maxLasers: 1000
 --- !u!65 &1196888077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2974,6 +2975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec55115bd08f18458455b022456fbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverMusic: {fileID: 8300000, guid: 44f093d88011f9144a35c252a7693a62, type: 3}
 --- !u!1001 &1807530554
 PrefabInstance:
   m_ObjectHideFlags: 0

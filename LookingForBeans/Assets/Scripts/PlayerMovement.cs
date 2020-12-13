@@ -73,7 +73,8 @@ public class PlayerMovement : MonoBehaviour
     public void IncrementPoint()
     {
         Debug.Log("Next Waypoint");
-        currentWayPoint++;
+        if (currentWayPoint < speeds.Count - 1)
+            currentWayPoint++;
     }
 
     public void SetPoints(Vector3 endPoint)

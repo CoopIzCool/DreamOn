@@ -106,3 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec55115bd08f18458455b022456fbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverMusic: {fileID: 8300000, guid: 44f093d88011f9144a35c252a7693a62, type: 3}
+  music: {fileID: 0}

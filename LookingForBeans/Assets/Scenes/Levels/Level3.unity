@@ -398,6 +398,16 @@ PrefabInstance:
       propertyPath: range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: hoverMat
+      value: 
+      objectReference: {fileID: 2100000, guid: c5c83c4503769584185609771f992ce6, type: 2}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: selectMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ccabf82cb5d24c4eab09957a426429f, type: 2}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1511,6 +1521,16 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 1807168940}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: hoverMat
+      value: 
+      objectReference: {fileID: 2100000, guid: c5c83c4503769584185609771f992ce6, type: 2}
+    - target: {fileID: 1055784363094489232, guid: c7a54a013679f3b4981173fa8f134b41,
+        type: 3}
+      propertyPath: selectMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ccabf82cb5d24c4eab09957a426429f, type: 2}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_LocalPosition.x
