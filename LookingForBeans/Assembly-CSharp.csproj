@@ -78,10 +78,12 @@
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\ShootyGun.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\SkyboxColorChanger.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WalkerMovement.cs" />
     <Compile Include="Assets\Scripts\WayPoint.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
+    <None Include="Assets\Materials\Fog\FogPlaneShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
