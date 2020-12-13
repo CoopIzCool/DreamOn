@@ -15,6 +15,11 @@ public class UIManager : MonoBehaviour
     public GameObject tutorialCircle;
     public Text objectTag;
 
+    public GameObject moveInstruct;
+    public GameObject rotateInstruct;
+    public GameObject slideInstruct;
+    public GameObject pressInstruct;
+
     float currentTime;
     public float toHowTransitionTime;
     public float tutorialTransitionTime;
@@ -31,6 +36,12 @@ public class UIManager : MonoBehaviour
         cameraAnimator.SetBool("ToMain", false);
         cameraAnimator.SetBool("ToTutorial", false);
         howToMenu.SetActive(false);
+        tutorialMenu.SetActive(false);
+
+        moveInstruct.SetActive(false);
+        rotateInstruct.SetActive(false);
+        slideInstruct.SetActive(false);
+        pressInstruct.SetActive(false);
 
         currentTime = 0.0f;
 
@@ -161,16 +172,40 @@ public class UIManager : MonoBehaviour
 
         //Move Objects
         if (detectRotate == 135)
+        {
             objectTag.text = "Move Objects";
+            moveInstruct.SetActive(true);
+            rotateInstruct.SetActive(false);
+            slideInstruct.SetActive(false);
+            pressInstruct.SetActive(false);
+        }
         //Slide Objects
         else if(detectRotate == 225)
+        {
             objectTag.text = "Slide Objects";
+            moveInstruct.SetActive(false);
+            rotateInstruct.SetActive(false);
+            slideInstruct.SetActive(true);
+            pressInstruct.SetActive(false);
+        }
         //Rotate Objects
         else if(detectRotate == 45)
+        {
             objectTag.text = "Rotate Objects";
+            moveInstruct.SetActive(false);
+            rotateInstruct.SetActive(true);
+            slideInstruct.SetActive(false);
+            pressInstruct.SetActive(false);
+        }
         //Press Objects
         else if(detectRotate == 315)
+        {
             objectTag.text = "Press Objects";
+            moveInstruct.SetActive(false);
+            rotateInstruct.SetActive(false);
+            slideInstruct.SetActive(false);
+            pressInstruct.SetActive(true);
+        }
     }
 
 }

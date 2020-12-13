@@ -213,10 +213,10 @@ public class Interact : MonoBehaviour
     {
         //Player Input
         if (Input.GetKey(KeyCode.Q))
-            angle += angleStep;
+            angle -= angleStep;
 
         if (Input.GetKey(KeyCode.E))
-            angle -= angleStep;
+            angle += angleStep;
 
         Quaternion target = Quaternion.Euler(0, angle, 0);
 
