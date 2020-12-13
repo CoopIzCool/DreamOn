@@ -80,7 +80,7 @@
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WalkerMovement.cs" />
-    <Compile Include="Assets\Scripts\WayPoint.cs" />
+    <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

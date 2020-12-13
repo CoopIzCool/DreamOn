@@ -57,7 +57,9 @@ public class RayCastInteraction : MonoBehaviour
             else
             {
                 if (previousInteractObject != null)
+                {
                     previousInteractObject.GetComponent<Interact>().hitByRay = false;
+                }
             }
         }
     }

@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class MusicPersistance : MonoBehaviour
 {
+    private static MusicPersistance instance = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
         DontDestroyOnLoad(this.gameObject);
     }
 
