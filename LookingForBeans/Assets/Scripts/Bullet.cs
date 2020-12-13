@@ -42,11 +42,11 @@ public class Bullet : MonoBehaviour
 
         if (other.CompareTag("BulletAbsorber"))
         {
-            absorbAction();
+            absorbAction?.Invoke();
         }
         else
         {
-            notAbsorbAction();
+            notAbsorbAction?.Invoke();
         }
 
         Destroy(gameObject);

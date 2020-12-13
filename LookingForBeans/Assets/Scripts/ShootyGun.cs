@@ -62,18 +62,27 @@ public class ShootyGun : MonoBehaviour
 
     private void BulletAbsorbAction()
     {
+        if (absorbObject == null)
+            return;
+
         absorbObject.SetActive(false);
         absorberMaterial.color = Color.green;
     }
 
     private void BulletNotAbsorbAction()
     {
-        absorbObject.SetActive(true);
+        if (absorbObject == null)
+            return;
+
+        absorbObject?.SetActive(true);
         absorberMaterial.color = absorbDefaultColor;
     }
 
     private void OnApplicationQuit()
     {
-        absorberMaterial.color = absorbDefaultColor;
+        if (absorberMaterial != null)
+        {
+            absorberMaterial.color = absorbDefaultColor;
+        }
     }
 }
