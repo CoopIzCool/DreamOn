@@ -21,6 +21,12 @@ public class UIManager : MonoBehaviour
     bool tutorialToTrans;
 
     float currentRotation;
+
+    public MusicPersistance music;
+
+    public AudioClip mainMusic;
+
+    public AudioClip gameMusic;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -35,6 +41,9 @@ public class UIManager : MonoBehaviour
         howReadyToTrans = false;
 
         currentRotation = tutorialCircle.transform.rotation.eulerAngles.y;
+
+        music.gameObject.GetComponent<AudioSource>().clip = mainMusic;
+        music.gameObject.GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
@@ -78,6 +87,8 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void Play()
     {
+        music.gameObject.GetComponent<AudioSource>().clip = gameMusic;
+        //music.gameObject.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Level1");
     }
 

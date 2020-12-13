@@ -11,7 +11,8 @@ public class SceneTransition : MonoBehaviour
     private string target;
     public string currentScene;
     public float waitTime;
-    public GameObject music;
+    private GameObject music;
+    public AudioClip mainMusic;
     #endregion Fields
 
     #region Properties
@@ -36,7 +37,10 @@ public class SceneTransition : MonoBehaviour
     {
         //This actually sets the current scene because
         //clicking the button will somehow skip the assignment of currentscene IDK
+        music = GameObject.Find("MusicManager");
+        music.GetComponent<AudioSource>().Play();
         currentScene = currentScene;
+        DontDestroyOnLoad(music);
     }
 
     private void Update()
@@ -46,8 +50,10 @@ public class SceneTransition : MonoBehaviour
     //go to the next level
     public void NextScene()
     {
-       // if (target == "FINAL_SCENE" && currentScene == "MainMenu")
-            //StartCoroutine(TransitionMusic(target));
+        // if (target == "FINAL_SCENE" && currentScene == "MainMenu")
+        //StartCoroutine(TransitionMusic(target));
+        if (target == "MainMenu")
+            music.GetComponent<AudioSource>().clip = mainMusic;
         SceneManager.LoadScene(target);
     }
 
@@ -58,7 +64,11 @@ public class SceneTransition : MonoBehaviour
         if (scene == "FINAL_SCENE" && currentScene == "MainMenu")
             StartCoroutine(TransitionMusic(scene));
         else
+        {
+            if (scene == "MainMenu")
+                music.GetComponent<AudioSource>().clip = mainMusic;
             SceneManager.LoadScene(scene);
+        }       
     }
 
     //go to menu
