@@ -27,7 +27,7 @@ public class Interact : MonoBehaviour
     [Header("Rotation Settings")]
     public float angleStep;
     float angle = 0.0f;   
-    float smooth = 5.0f;
+    float smooth = 15.0f;
 
     //Slide
     [Header("Slide Settings")]
@@ -61,6 +61,8 @@ public class Interact : MonoBehaviour
 
         hitByRay = false;
         selected = false;
+
+        angle = gameObject.transform.rotation.eulerAngles.y;
     }
 
     // Update is called once per frame
@@ -117,7 +119,7 @@ public class Interact : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject.tag == "Ground")
+            if (hit.collider.gameObject.tag == "Ground" && hit.normal == hit.transform.up)
             {
                 Vector3 mousePos = hit.point;
 
@@ -180,7 +182,6 @@ public class Interact : MonoBehaviour
             angle += angleStep;
 
         if (Input.GetKey(KeyCode.E))
-
             angle -= angleStep;
 
         Quaternion target = Quaternion.Euler(0, angle, 0);
