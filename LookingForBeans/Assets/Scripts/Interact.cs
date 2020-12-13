@@ -218,7 +218,7 @@ public class Interact : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
             angle += angleStep;
 
-        Quaternion target = Quaternion.Euler(0, angle, 0);
+        Quaternion target = Quaternion.Euler(transform.rotation.eulerAngles.x, angle, transform.rotation.eulerAngles.z);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
