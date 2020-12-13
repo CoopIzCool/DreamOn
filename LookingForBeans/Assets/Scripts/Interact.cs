@@ -87,6 +87,8 @@ public class Interact : MonoBehaviour
         {
             if (!onMainMenu)
                 UpdateMaterial();
+            else
+                gameObject.GetComponent<MeshRenderer>().material = interactDefaultMat;
 
             if (!onMainMenu)
                 UpdateSelect();
@@ -142,7 +144,8 @@ public class Interact : MonoBehaviour
     void ChooseMovementType()
     {
         //Player selects the object
-        gameObject.GetComponent<MeshRenderer>().material = selectMat;
+        if(!onMainMenu)
+            gameObject.GetComponent<MeshRenderer>().material = selectMat;
 
         //Creates a raycast that will ignore the object
         gameObject.layer = 2;
