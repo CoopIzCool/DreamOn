@@ -372,8 +372,8 @@ MonoBehaviour:
   range: 0
   pressAnimator: {fileID: 648242957}
   interactDefaultMat: {fileID: 2100000, guid: 5d0ec550de1fad4419e98d7bf2e84195, type: 2}
-  hoverMat: {fileID: 2100000, guid: f5ae7dc6cd1019a42929e6e1cbb2feff, type: 2}
-  selectMat: {fileID: 2100000, guid: 449d5d5809573ae4498ce8c5bcc84dcc, type: 2}
+  hoverMat: {fileID: 2100000, guid: 1ccd366b382efb14aabf9b42ba655434, type: 2}
+  selectMat: {fileID: 2100000, guid: 3e4a7301c0de43d43869d708e904beb0, type: 2}
   hitByRay: 0
   ground: {fileID: 1184871173}
   beingLaunched: 0
@@ -1263,12 +1263,12 @@ PrefabInstance:
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
       propertyPath: speeds.Array.data[2]
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
       propertyPath: speeds.Array.data[3]
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
@@ -1716,8 +1716,8 @@ MonoBehaviour:
   range: 0
   pressAnimator: {fileID: 648242957}
   interactDefaultMat: {fileID: 2100000, guid: 5d0ec550de1fad4419e98d7bf2e84195, type: 2}
-  hoverMat: {fileID: 2100000, guid: f5ae7dc6cd1019a42929e6e1cbb2feff, type: 2}
-  selectMat: {fileID: 2100000, guid: 449d5d5809573ae4498ce8c5bcc84dcc, type: 2}
+  hoverMat: {fileID: 2100000, guid: 1ccd366b382efb14aabf9b42ba655434, type: 2}
+  selectMat: {fileID: 2100000, guid: 3e4a7301c0de43d43869d708e904beb0, type: 2}
   hitByRay: 0
   ground: {fileID: 1184871173}
   beingLaunched: 0
