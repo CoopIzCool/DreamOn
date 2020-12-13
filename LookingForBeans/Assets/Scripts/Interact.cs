@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Deployment.Internal;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -27,7 +26,7 @@ public class Interact : MonoBehaviour
     [Header("Rotation Settings")]
     public float angleStep;
     float angle = 0.0f;   
-    float smooth = 5.0f;
+    float smooth = 15.0f;
 
     //Slide
     [Header("Slide Settings")]
@@ -74,6 +73,8 @@ public class Interact : MonoBehaviour
 
         hitByRay = false;
         selected = false;
+
+        angle = gameObject.transform.rotation.eulerAngles.y;
         beingLaunched = false;
     }
 
@@ -86,6 +87,8 @@ public class Interact : MonoBehaviour
         {
             if (!onMainMenu)
                 UpdateMaterial();
+            else
+                gameObject.GetComponent<MeshRenderer>().material = interactDefaultMat;
 
             if (!onMainMenu)
                 UpdateSelect();
@@ -141,7 +144,8 @@ public class Interact : MonoBehaviour
     void ChooseMovementType()
     {
         //Player selects the object
-        gameObject.GetComponent<MeshRenderer>().material = selectMat;
+        if(!onMainMenu)
+            gameObject.GetComponent<MeshRenderer>().material = selectMat;
 
         //Creates a raycast that will ignore the object
         gameObject.layer = 2;
@@ -149,7 +153,7 @@ public class Interact : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject.tag == "Ground")
+            if (hit.collider.gameObject.tag == "Ground" && hit.normal == hit.transform.up)
             {
                 Vector3 mousePos = hit.point;
 
@@ -212,7 +216,6 @@ public class Interact : MonoBehaviour
             angle += angleStep;
 
         if (Input.GetKey(KeyCode.E))
-
             angle -= angleStep;
 
         Quaternion target = Quaternion.Euler(0, angle, 0);
