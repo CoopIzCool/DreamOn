@@ -11,16 +11,12 @@ public class SceneTransition : MonoBehaviour
     private string target;
     public string currentScene;
     public float waitTime;
-<<<<<<< HEAD
     private GameObject music;
     public AudioClip mainMusic;
-=======
-    public GameObject music;
     public bool isLevel;
     public static bool isPaused;
     [SerializeField]
     private GameObject pauseMenuUI;
->>>>>>> Develop
     #endregion Fields
 
     #region Properties
@@ -48,9 +44,7 @@ public class SceneTransition : MonoBehaviour
         music = GameObject.Find("MusicManager");
         music.GetComponent<AudioSource>().Play();
         currentScene = currentScene;
-<<<<<<< HEAD
         DontDestroyOnLoad(music);
-=======
 
         //If this is a level, enable pause implementation and set the player preferences to this level
         if (isLevel)
@@ -59,7 +53,6 @@ public class SceneTransition : MonoBehaviour
             pauseMenuUI.SetActive(false);
             PlayerPrefs.SetString("PrevLevel", currentScene);
         }
->>>>>>> Develop
     }
 
     private void Update()
