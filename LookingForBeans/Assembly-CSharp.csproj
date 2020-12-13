@@ -67,11 +67,8 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraFixedRotation.cs" />
     <Compile Include="Assets\Scripts\Interact.cs" />
-    <Compile Include="Assets\Scripts\JumpPad.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\ObstaclesOrGoals\FridgeCollision.cs" />
-    <Compile Include="Assets\Scripts\ObstaclesOrGoals\HazardCollision.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\RayCastInteraction.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\ShootyGun.cs" />
