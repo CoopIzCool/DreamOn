@@ -161,7 +161,7 @@ public class Interact : MonoBehaviour
                 if (move)
                 {
                     //Freeform movement
-                    mousePos.y += (gameObject.transform.localScale.y / 2);
+                    mousePos.y = gameObject.transform.position.y;
                     gameObject.transform.position = mousePos;
 
                     //Rotation
