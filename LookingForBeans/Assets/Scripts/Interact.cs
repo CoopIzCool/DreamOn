@@ -99,7 +99,7 @@ public class Interact : MonoBehaviour
         if (selected && Input.GetMouseButtonUp(0))
             selected = false;
 
-        //Updates the buttono animator
+        //Updates the button animator
         if(pressed)
         {
             if(pressAnimator != null)
