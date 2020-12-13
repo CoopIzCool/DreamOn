@@ -87,6 +87,8 @@ public class Interact : MonoBehaviour
         {
             if (!onMainMenu)
                 UpdateMaterial();
+            else
+                gameObject.GetComponent<MeshRenderer>().material = interactDefaultMat;
 
             if (!onMainMenu)
                 UpdateSelect();
@@ -142,7 +144,8 @@ public class Interact : MonoBehaviour
     void ChooseMovementType()
     {
         //Player selects the object
-        gameObject.GetComponent<MeshRenderer>().material = selectMat;
+        if(!onMainMenu)
+            gameObject.GetComponent<MeshRenderer>().material = selectMat;
 
         //Creates a raycast that will ignore the object
         gameObject.layer = 2;
@@ -158,7 +161,7 @@ public class Interact : MonoBehaviour
                 if (move)
                 {
                     //Freeform movement
-                    mousePos.y += (gameObject.transform.localScale.y / 2);
+                    mousePos.y = gameObject.transform.position.y;
                     gameObject.transform.position = mousePos;
 
                     //Rotation
@@ -210,12 +213,12 @@ public class Interact : MonoBehaviour
     {
         //Player Input
         if (Input.GetKey(KeyCode.Q))
-            angle += angleStep;
-
-        if (Input.GetKey(KeyCode.E))
             angle -= angleStep;
 
-        Quaternion target = Quaternion.Euler(0, angle, 0);
+        if (Input.GetKey(KeyCode.E))
+            angle += angleStep;
+
+        Quaternion target = Quaternion.Euler(transform.rotation.eulerAngles.x, angle, transform.rotation.eulerAngles.z);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }

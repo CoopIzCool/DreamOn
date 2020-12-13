@@ -11,7 +11,12 @@ public class SceneTransition : MonoBehaviour
     private string target;
     public string currentScene;
     public float waitTime;
-    public GameObject music;
+    private GameObject music;
+    public AudioClip mainMusic;
+    public bool isLevel;
+    public static bool isPaused;
+    [SerializeField]
+    private GameObject pauseMenuUI;
     #endregion Fields
 
     #region Properties
@@ -36,18 +41,41 @@ public class SceneTransition : MonoBehaviour
     {
         //This actually sets the current scene because
         //clicking the button will somehow skip the assignment of currentscene IDK
+        music = GameObject.Find("MusicManager");
+        music.GetComponent<AudioSource>().Play();
         currentScene = currentScene;
+        DontDestroyOnLoad(music);
+
+        //If this is a level, enable pause implementation and set the player preferences to this level
+        if (isLevel)
+        {
+            isPaused = false;
+            pauseMenuUI.SetActive(false);
+            PlayerPrefs.SetString("PrevLevel", currentScene);
+        }
     }
 
     private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape) && isLevel)
+        {
+            if(isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                pauseGame();
+            }
+        }
     }
     //go to the next level
     public void NextScene()
     {
-       // if (target == "FINAL_SCENE" && currentScene == "MainMenu")
-            //StartCoroutine(TransitionMusic(target));
+        // if (target == "FINAL_SCENE" && currentScene == "MainMenu")
+        //StartCoroutine(TransitionMusic(target));
+        if (target == "MainMenu")
+            music.GetComponent<AudioSource>().clip = mainMusic;
         SceneManager.LoadScene(target);
     }
 
@@ -58,7 +86,11 @@ public class SceneTransition : MonoBehaviour
         if (scene == "FINAL_SCENE" && currentScene == "MainMenu")
             StartCoroutine(TransitionMusic(scene));
         else
+        {
+            if (scene == "MainMenu")
+                music.GetComponent<AudioSource>().clip = mainMusic;
             SceneManager.LoadScene(scene);
+        }       
     }
 
     //go to menu
@@ -84,6 +116,24 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void retryLevel()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("PrevLevel"));
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        isPaused = false;
+    }
+
+    public void pauseGame()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0.0f;
+        isPaused = true;
+    }
     #endregion Level Directory
     #endregion Methods
 }

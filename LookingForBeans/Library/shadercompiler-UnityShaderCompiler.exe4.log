@@ -1,4 +1,4 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/PlaybackEngines'
+Base path: 'D:/Unity Versions/2019.4.7f1/Editor/Data', plugins path 'D:/Unity Versions/2019.4.7f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileSnippet
   error: 2 plat 4 at (54): invalid subscript 'uv'\nCompiling Fragment program

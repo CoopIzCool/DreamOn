@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.0,"y":-0.48000001907348635,"z":0.0},"rotation":{"x":0.12651649117469788,"y":-0.3082479238510132,"z":0.041378844529390338,"w":0.9420134425163269},"size":6.000000953674316,"orthographic":false}
+=======
+<<<<<<< HEAD
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":6.704441070556641,"y":-4.908143043518066,"z":8.146875381469727},"rotation":{"x":0.24467146396636964,"y":0.10649247467517853,"z":-0.027072284370660783,"w":0.9633743762969971},"size":10.0,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":2.164743423461914,"y":0.2275686264038086,"z":-3.2111077308654787},"rotation":{"x":0.23654159903526307,"y":0.007283022161573172,"z":-0.0017714662244543434,"w":0.9715976715087891},"size":3.3619298934936525,"orthographic":false}
+>>>>>>> Ryan
+>>>>>>> Develop
