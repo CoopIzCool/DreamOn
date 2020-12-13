@@ -40,6 +40,13 @@ public class RayCastInteraction : MonoBehaviour
                     gameObject.GetComponent<UIManager>().Play();
                 }
             }
+            else if(hit.collider.gameObject.tag == "How")
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    gameObject.GetComponent<UIManager>().ToHowToPlay();
+                }
+            }
             else if(hit.collider.gameObject.tag == "Quit")
             {
                 if(Input.GetMouseButtonDown(0))
