@@ -220,12 +220,12 @@ PrefabInstance:
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.370426
+      value: -13.82
       objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.201719
+      value: 12.46
       objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
@@ -679,7 +679,7 @@ PrefabInstance:
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
       propertyPath: speeds.Array.data[2]
-      value: 1.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9202611565989993022, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}

@@ -332,8 +332,8 @@ Transform:
   m_LocalPosition: {x: -0.169314, y: 0.67, z: -0.5109022}
   m_LocalScale: {x: 2.4406, y: 0.66076803, z: 2.4406}
   m_Children:
-  - {fileID: 1297978211}
   - {fileID: 641715754}
+  - {fileID: 1297978211}
   - {fileID: 1322797605}
   - {fileID: 509544113}
   - {fileID: 498168741}
@@ -368,6 +368,8 @@ MonoBehaviour:
   selectMat: {fileID: 0}
   hitByRay: 0
   ground: {fileID: 459945731}
+  beingLaunched: 0
+  launchHeight: 0
 --- !u!1 &347932851
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +890,7 @@ Transform:
   m_LocalScale: {x: 0.03274, y: 0.120929, z: 0.03274}
   m_Children: []
   m_Father: {fileID: 179315371}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!212 &641715755
 SpriteRenderer:
@@ -1401,7 +1403,7 @@ Transform:
   m_LocalScale: {x: 0.028483883, y: 0.102157556, z: 0.028483883}
   m_Children: []
   m_Father: {fileID: 179315371}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1297978212
 SpriteRenderer:
