@@ -13,6 +13,8 @@ public class Laser : MonoBehaviour
     private Material laserMaterial;
     [SerializeField]
     private Material laserSolutionMaterial;
+    [SerializeField]
+    private Animator animator;
 
     private Func<bool> castRaysFunc;
 
@@ -40,7 +42,7 @@ public class Laser : MonoBehaviour
         laser.endColor = Color.red;
         laser.material = laserMaterial;
 
-        unsolvedColor = laserSolutionMaterial.color;
+        unsolvedColor = new Color(221 / 255.0f, 130 / 255.0f, 120 / 255.0f, 1);
 
         // Using this rather than update to make sure the stack is not modified across 
         // multiple frames. This would cause garbage/old lasers to stick around.
@@ -64,8 +66,12 @@ public class Laser : MonoBehaviour
             // Extend the laser past the final origin if the puzzle is not solved and the laser didn't just end
             if (!solved && !maxLasersReached && !playerHit) vertices.Add(rays[rays.Count - 1].GetPoint(30));
 
-            // If the puzzle is solved, let the player know by recoloring the solution block
-            if (solved) laserSolutionMaterial.color = Color.green;
+            // If the puzzle is solved, let the player know by recoloring the solution block. Also change the animator if needed.
+            if (solved)
+            {
+                laserSolutionMaterial.color = Color.green;
+                if (animator != null && !animator.GetBool("LaserSolved")) animator.SetBool("LaserSolved", true);
+            }
 
             laser.positionCount = vertices.Count;
             laser.SetPositions(vertices.ToArray());
