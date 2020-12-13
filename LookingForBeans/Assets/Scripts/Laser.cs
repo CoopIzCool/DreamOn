@@ -20,6 +20,7 @@ public class Laser : MonoBehaviour
 
     private bool solved = false;
     private bool playerHit = false;
+    private bool laserAbsorbed = false;
 
     private const int maxLasers = 1000;
     private int currentLasers = 0;
@@ -50,6 +51,7 @@ public class Laser : MonoBehaviour
         {
             solved = false;
             playerHit = false;
+            laserAbsorbed = false;
             laserSolutionMaterial.color = unsolvedColor;
 
             // Recursively cast the laser
@@ -64,13 +66,17 @@ public class Laser : MonoBehaviour
             }
 
             // Extend the laser past the final origin if the puzzle is not solved and the laser didn't just end
-            if (!solved && !maxLasersReached && !playerHit) vertices.Add(rays[rays.Count - 1].GetPoint(30));
+            if (!solved && !maxLasersReached && !playerHit && !laserAbsorbed) vertices.Add(rays[rays.Count - 1].GetPoint(30));
 
             // If the puzzle is solved, let the player know by recoloring the solution block. Also change the animator if needed.
             if (solved)
             {
                 laserSolutionMaterial.color = Color.green;
                 if (animator != null && !animator.GetBool("LaserSolved")) animator.SetBool("LaserSolved", true);
+            }
+            else
+            {
+                if (animator != null && animator.GetBool("LaserSolved")) animator.SetBool("LaserSolved", false);
             }
 
             laser.positionCount = vertices.Count;
@@ -103,10 +109,15 @@ public class Laser : MonoBehaviour
         maxLasersReached = currentLasers > maxLasers;
 
         RaycastHit hit;
-        if (Physics.Raycast(castedRay, out hit) && !solved && !maxLasersReached && !playerHit)
+        if (Physics.Raycast(castedRay, out hit) 
+            && !solved 
+            && !maxLasersReached 
+            && !playerHit 
+            && !laserAbsorbed)
         {
             if (hit.collider.CompareTag("LaserSolution")) solved = true;
             if (hit.collider.CompareTag("Player")) playerHit = true;
+            if (hit.collider.CompareTag("LaserAbsorber")) laserAbsorbed = true;
 
             Vector3 reflectDirection = Vector3.Reflect(castedRay.direction, hit.normal);
             
