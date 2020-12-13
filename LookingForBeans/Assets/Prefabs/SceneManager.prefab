@@ -47,3 +47,4 @@ MonoBehaviour:
   currentScene: 
   waitTime: 0
   music: {fileID: 0}
+  isLevel: 0

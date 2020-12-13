@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/Level1.unity
+=======
+- path: Assets/Scenes/GameOver.unity
+>>>>>>> Ryan
   isLoaded: 1
   isActive: 1
   isSubScene: 0

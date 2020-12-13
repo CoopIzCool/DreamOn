@@ -12,6 +12,7 @@ public class SceneTransition : MonoBehaviour
     public string currentScene;
     public float waitTime;
     public GameObject music;
+    public bool isLevel;
     #endregion Fields
 
     #region Properties
@@ -37,6 +38,9 @@ public class SceneTransition : MonoBehaviour
         //This actually sets the current scene because
         //clicking the button will somehow skip the assignment of currentscene IDK
         currentScene = currentScene;
+        if(isLevel)
+        PlayerPrefs.SetString("PrevLevel", currentScene);
+        Debug.Log(PlayerPrefs.GetString("PrevLevel"));
     }
 
     private void Update()
@@ -84,6 +88,10 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void retryLevel()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("PrevLevel"));
+    }
     #endregion Level Directory
     #endregion Methods
 }
