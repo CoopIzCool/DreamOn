@@ -327,6 +327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WayPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1919267204543434501, guid: 3a3a081e9404cdb4b998ce013265ba81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -658,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
@@ -972,16 +977,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 530799777336665901, guid: e79122623d490a744a113e67cb653ed3,
         type: 3}
-<<<<<<< HEAD
-      propertyPath: target
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 530799777336665901, guid: e79122623d490a744a113e67cb653ed3,
-        type: 3}
-      propertyPath: currentScene
-      value: Level4
-      objectReference: {fileID: 0}
-=======
       propertyPath: currentScene
       value: Level4
       objectReference: {fileID: 0}
@@ -995,7 +990,11 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 46226172}
->>>>>>> Develop
+    - target: {fileID: 530799777336665901, guid: e79122623d490a744a113e67cb653ed3,
+        type: 3}
+      propertyPath: target
+      value: LevelEric
+      objectReference: {fileID: 0}
     - target: {fileID: 5217723228619691812, guid: e79122623d490a744a113e67cb653ed3,
         type: 3}
       propertyPath: m_Name
@@ -1093,6 +1092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WayPoint (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919267204543434501, guid: 3a3a081e9404cdb4b998ce013265ba81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
@@ -1268,6 +1272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WayPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919267204543434501, guid: 3a3a081e9404cdb4b998ce013265ba81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
@@ -1764,6 +1773,7 @@ GameObject:
   - component: {fileID: 1400103107}
   - component: {fileID: 1400103106}
   - component: {fileID: 1400103105}
+  - component: {fileID: 1400103109}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1845,8 +1855,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!114 &1400103109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,10 +1867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edc01fa3fde05b40910846ccda18d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserMaterial: {fileID: 0}
-  laserSolutionMaterial: {fileID: 0}
-  animator: {fileID: 0}
->>>>>>> Develop
 --- !u!1 &1469048766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,7 +2028,7 @@ PrefabInstance:
     - target: {fileID: 6660977681765443851, guid: 8924b7fbc19c7c6488254dfe72c73630,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6660977681765443851, guid: 8924b7fbc19c7c6488254dfe72c73630,
         type: 3}
@@ -2125,7 +2129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1551626219
 MonoBehaviour:
@@ -2163,6 +2167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WayPoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919267204543434501, guid: 3a3a081e9404cdb4b998ce013265ba81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
@@ -2362,7 +2371,7 @@ PrefabInstance:
     - target: {fileID: 3046511097596956879, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3046511097596956879, guid: 44ab1ef11c95b08409b1088ffa4cd7d9,
         type: 3}
@@ -2682,6 +2691,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WayPoint (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1919267204543434501, guid: 3a3a081e9404cdb4b998ce013265ba81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1919267204543434503, guid: 3a3a081e9404cdb4b998ce013265ba81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2809,7 +2823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1955664534
 PrefabInstance:
@@ -2861,7 +2875,7 @@ PrefabInstance:
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1055784363094489235, guid: c7a54a013679f3b4981173fa8f134b41,
         type: 3}

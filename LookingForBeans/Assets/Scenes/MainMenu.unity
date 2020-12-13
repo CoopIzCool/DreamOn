@@ -2629,6 +2629,7 @@ GameObject:
   - component: {fileID: 1174995090}
   - component: {fileID: 1174995089}
   - component: {fileID: 1174995088}
+  - component: {fileID: 1174995091}
   m_Layer: 0
   m_Name: Title Arm
   m_TagString: Untagged
@@ -2636,8 +2637,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1174995087
-Transform:
+--- !u!224 &1174995087
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2650,6 +2651,11 @@ Transform:
   m_Father: {fileID: 179315371}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1174995088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2710,6 +2716,14 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174995086}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!222 &1174995091
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174995086}
+  m_CullTransparentMesh: 0
 --- !u!1 &1197135810
 GameObject:
   m_ObjectHideFlags: 0

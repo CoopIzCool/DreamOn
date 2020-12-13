@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1919267204543434500}
   - component: {fileID: 1919267204543434501}
   - component: {fileID: 1919267204543434498}
-  - component: {fileID: 4002312826597575929}
+  - component: {fileID: 4489595879634806671}
   m_Layer: 0
   m_Name: WayPoint
   m_TagString: Untagged
@@ -94,7 +94,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4002312826597575929
+--- !u!114 &4489595879634806671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
