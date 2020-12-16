@@ -100,7 +100,7 @@ public class SceneTransition : MonoBehaviour
     //go to menu
     public void mainMenu()
     {
-
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void quitGame()
